@@ -26,6 +26,7 @@ body{
   display: flex;
   flex-direction: column;
 background-color: #F2F2F2;
+
  line-height: 28px;
  height: 100%;
  width: 100%;
@@ -45,4 +46,193 @@ background-image: url(../img/bg-left-bottom.svg), url(../img/bg-right-top.svg);
  padding-right: 25px;
  margin-left: auto;
  margin-right: auto;
+}
+
+
+/* PROJECT STYLES  */
+
+.container {
+}
+
+.page{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+ padding-top: 70px;
+ padding-bottom: 70px;
+}
+.page-title {
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 39px;
+  color:#6E728E;
+  margin-bottom: 40px;
+}
+
+.switch{
+  display: flex;
+  align-items:center;
+  justify-content: center;
+  gap: 15px;
+}
+
+.switch-control{
+  position: relative;
+width:56px;
+height:32px ;
+border-radius:16px;
+background-color: #9298eb;
+padding: 4px;
+}
+
+.switch-circle{
+width: 24px;
+height: 24px;
+background-color: #fff;
+border-radius:50%;
+transition: margin 0.3s ease;
+}
+
+
+
+.switch-label{
+font-size: 15px;
+line-height: 28px;
+color:rgb(110, 114, 142,0.5);
+cursor: pointer;
+transition: color 0.3s ease;
+}
+.switch-label:hover{
+  color:#6E728E;
+}
+
+
+.switch-control-annual,
+.switch-control-monthly{
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  cursor: pointer;
+}
+
+
+.switch-input-annual:checked ~ .switch-control .switch-control-monthly,
+.switch-input-monthly:checked ~ .switch-control .switch-control-annual{
+  z-index: 5;
+}
+
+.switch-input-monthly:checked ~ .switch-control .switch-circle{
+  margin-left: 24px;
+}
+
+.pricing{
+
+ width: 100%;
+}
+
+.pricing-switch{
+  margin-bottom: 64px;
+}
+.pricing-inner {
+  display: flex;
+  align-items:center;
+}
+.pricing-plan {
+  display: flex;
+  flex-direction: column;
+  align-items:center;
+flex-grow: 1;
+max-width: 350px;
+padding: 32px;
+background-color: #fff;
+}
+
+.pricing-plan-best {
+  padding-top: 55px;
+  padding-bottom: 55px;
+  border-radius: 10px;
+  background-color: #A2A7F0;
+  color:#fff;
+}
+
+.pricing-plan:first-child{
+ border-top-left-radius: 10px;
+ border-bottom-left-radius: 10px;
+}
+
+.pricing-plan:last-child{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
+.pricing-plan-title {
+  font-weight: bold;
+  font-size: 18px;
+  line-height: 28px;
+  margin-bottom: 24px;
+}
+
+.pricing-plan-price{
+  display: flex;
+  align-items:center;
+font-size: 72px;
+line-height: 71px;
+letter-spacing: -2.1px;
+margin-bottom: 32px;
+}
+.pricing-plan-currency {
+  font-size: 40px;
+  line-height: 48px;
+  margin-right: 8px;
+}
+.pricing-plan-features {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  list-style: none;
+  border-top: 1px solid rgb(102, 102, 139, 0.25);
+  width: 100%;
+  margin-bottom: 32px;
+}
+.pricing-plan-feature {
+text-align: center;
+  padding-top: 12px;
+  padding-bottom: 12px;
+  border-bottom: 1px solid rgb(102, 102, 139, 0.25);
+  width: 100%;
+}
+.button {
+padding: 14px;
+width: 100%;
+background-color:#A2A7F0;
+display: flex;
+align-items: center;
+justify-content: center;
+text-decoration: none;
+line-height: normal;
+letter-spacing: 1.4px;
+text-transform: uppercase;
+color:white;
+border-radius:8px;
+border: 1px solid transparent;
+transition: background-color 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+.button-block {
+}
+.button-primary {
+background-color:#fff;
+color:#6D72DE;
+}
+
+.button:hover{
+  background-color:#fff;
+color:#6D72DE;
+border: 1px solid #6D72DE;
+}
+
+.button-primary:hover{
+  background-color:transparent;
+  border: 1px solid #fff;
+color:#fff;
 }
